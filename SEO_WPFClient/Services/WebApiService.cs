@@ -2,6 +2,7 @@
 using SEO_WPFClient.ViewModel;
 using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace SEO_WPFClient.Services
 {
@@ -9,19 +10,19 @@ namespace SEO_WPFClient.Services
     {
         const string GETURLRANKS_URL = @"https://localhost:44318/api/Search/GetURLRanks";
         const string GETALLLINKS_URL = @"https://localhost:44318/api/Search/GetAllLinks";
-
-        public SearchResult GetURLRanks(string searchText, string urlToMatch)
+        
+        public async Task<SearchResult> GetURLRanksAsync(string searchText, string urlToMatch)
         {
             string query = string.Format("searchText={0}&urlToMatch={1}", searchText, urlToMatch);
-            return CallApi<SearchResult>(GETURLRANKS_URL, query);
+            return await CallApi<SearchResult>(GETURLRANKS_URL, query);
         }
-        public string GetAllLinks(string searchText)
+        public async Task<string> GetAllLinks(string searchText)
         {
             string query = string.Format("searchText={0}", searchText);
-            return CallApi<string>(GETALLLINKS_URL, query);
+            return await CallApi<string>(GETALLLINKS_URL, query);
         }
 
-        private T CallApi<T>(string url, string query)
+        private async Task<T> CallApi<T>(string url, string query)
         {
             using (var client = new HttpClient())
             {
@@ -41,7 +42,7 @@ namespace SEO_WPFClient.Services
                 if (response.IsSuccessStatusCode)
                 {
                     // Reading Response.  
-                    string result = response.Content.ReadAsStringAsync().Result;
+                    string result = await response.Content.ReadAsStringAsync();
                     responseObj = JsonConvert.DeserializeObject<T>(result);
 
                     // Releasing.  

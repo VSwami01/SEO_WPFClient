@@ -1,10 +1,11 @@
 ﻿using SEO_WPFClient.ViewModel;
+using System.Threading.Tasks;
 
 namespace SEO_WPFClient.Services
 {
     public interface IWebApiService
     {
-        SearchResult GetURLRanks(string searchText, string urlToMatch);
-        string GetAllLinks(string searchText);
+        Task<SearchResult> GetURLRanksAsync(string searchText, string urlToMatch);
+        Task<string> GetAllLinks(string searchText);
     }
 }
