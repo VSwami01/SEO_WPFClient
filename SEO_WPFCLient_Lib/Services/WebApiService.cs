@@ -25,7 +25,7 @@ namespace SEO_WPFCLient_Lib.Services
             if (searchText.IsNullOrEmpty() || urlToMatch.IsNullOrEmpty())
                 return await Task.FromResult<SearchResult>(null);
 
-            string query = string.Format("searchText={0}&urlToMatch={1}", searchText, urlToMatch);
+            var query = string.Format("searchText={0}&urlToMatch={1}", searchText, urlToMatch);
             return await CallApi<SearchResult>(Settings.GETURLRANKS_URL, query);
         }
 
@@ -39,7 +39,7 @@ namespace SEO_WPFCLient_Lib.Services
             if (searchText.IsNullOrEmpty())
                 return await Task.FromResult<IList<string>>(null);
 
-            string query = string.Format("searchText={0}", searchText);
+            var query = string.Format("searchText={0}", searchText);
             return await CallApi<IEnumerable<string>>(Settings.GETALLLINKS_URL, query);
         }
 
@@ -64,7 +64,7 @@ namespace SEO_WPFCLient_Lib.Services
                 //API key for secured access
                 client.DefaultRequestHeaders.Add("ApiKey", Settings.API_KEY);
 
-                HttpResponseMessage response = client.GetAsync(builder.Uri).Result;
+                var response = client.GetAsync(builder.Uri).Result;
 
                 // Verification  
                 if (response.IsSuccessStatusCode)

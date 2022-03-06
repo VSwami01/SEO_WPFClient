@@ -30,6 +30,4 @@ namespace SEO_WPFClient
             mainWindow.Show();
         }
     }
-
-
 }

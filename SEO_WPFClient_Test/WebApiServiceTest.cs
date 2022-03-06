@@ -84,13 +84,6 @@ namespace SEO_WPFClient_Test
             Assert.AreEqual(expected, actual);
         }
 
-
-
-
-        //----------------------------
-
-
-
         /// <summary>
         /// Test with empty search text parameter returning null
         /// </summary>
@@ -124,6 +117,5 @@ namespace SEO_WPFClient_Test
             // Assert
             Assert.AreEqual(expected, actual);
         }
-
     }
 }

@@ -12,7 +12,7 @@ namespace SEO_WPFClient_Test
         public void TrimSpecialChars_EmptyText_ReturnEmpty()
         {
             // Arrange
-            string text = string.Empty;
+            var text = string.Empty;
             var expected = string.Empty;
 
             // Act
@@ -46,7 +46,7 @@ namespace SEO_WPFClient_Test
         public void TrimSpecialChars_StringWithDot_ReturnTrimmedWithoutDot()
         {
             // Arrange
-            string text = ".this.";
+            var text = ".this.";
             var expected = "this";
 
             // Act
@@ -63,7 +63,7 @@ namespace SEO_WPFClient_Test
         public void TrimSpecialChars_StringWithStar_ReturnTrimmedWithoutStar()
         {
             // Arrange
-            string text = "*this*";
+            var text = "*this*";
             var expected = "this";
 
             // Act
@@ -80,7 +80,7 @@ namespace SEO_WPFClient_Test
         public void TrimSpecialChars_StringWithSpace_ReturnTrimmedWithoutSpace()
         {
             // Arrange
-            string text = " this ";
+            var text = " this ";
             var expected = "this";
 
             // Act
@@ -97,7 +97,7 @@ namespace SEO_WPFClient_Test
         public void TrimSpecialChars_StringForwardSlash_ReturnTrimmedWithoutForwardSlash()
         {
             // Arrange
-            string text = "/this/";
+            var text = "/this/";
             var expected = "this";
 
             // Act
@@ -114,7 +114,7 @@ namespace SEO_WPFClient_Test
         public void TrimSpecialChars_StringBackwardSlash_ReturnTrimmedWithoutBackwardSlash()
         {
             // Arrange
-            string text = "\\this\\";
+            var text = "\\this\\";
             var expected = "this";
 
             // Act
@@ -148,7 +148,7 @@ namespace SEO_WPFClient_Test
         public void IsNullOrEmpty_EmptyText_ReturnTrue()
         {
             // Arrange
-            string text = string.Empty;
+            var text = string.Empty;
             var expected = true;
 
             // Act
@@ -166,7 +166,7 @@ namespace SEO_WPFClient_Test
         public void IsNullOrEmpty_NonEmptyText_ReturnFalse()
         {
             // Arrange
-            string text = "test";
+            var text = "test";
             var expected = false;
 
             // Act

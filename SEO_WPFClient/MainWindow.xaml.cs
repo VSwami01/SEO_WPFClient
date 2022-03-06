@@ -61,5 +61,4 @@ namespace SEO_WPFClient
                 || searchUrl.TrimSpecialChars().IsNullOrEmpty());
         }
     }
-
 }

@@ -42,19 +42,19 @@
 
             <TextBox x:Name="txtSearchText"          
                  Text="conveyancing software"        
-                 Height="20"           
-                 Grid.Column="1" Margin="12,15,-81,5"/>
+                 Height="24"           
+                 Grid.Column="1" Margin="12,14,-81,6"/>
             <TextBox x:Name="txtSearchUrl"          
                  Text="www.smokeball.com.au"        
-                 Height="20"           
+                 Height="24"           
                  Grid.Row="1"    
-                 Grid.Column="1" Margin="12,6,-81,4"/>
+                 Grid.Column="1" Margin="12,4,-81,6"/>
 
             <Button x:Name="btnSearch"            
                 Width="100"            
                 Content="Search"            
                 HorizontalAlignment="Left"            
-                Margin="32,13,0,7"          
+                Margin="31,13,0,7"          
                 Command="{Binding PostButtonClick}"      
                 CommandParameter="{Binding CreateEmployee}"    
                 Grid.Row="2" Grid.Column="1" Click="btnSearch_Click"/>
