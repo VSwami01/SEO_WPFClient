@@ -1,4 +1,5 @@
-﻿using SEO_WPFCLient_Lib.Model;
+﻿using SEO_WPFCLient_Lib.Extentions;
+using SEO_WPFCLient_Lib.Model;
 using SEO_WPFCLient_Lib.Services;
 using System;
 using System.Windows;
@@ -21,7 +22,18 @@ namespace SEO_WPFClient
         {
             try
             {
-                SearchResult result = await _webApiService.GetURLRanksAsync(txtSearchText.Text, txtSearchUrl.Text);
+                string searchText = txtSearchText.Text;
+                string searchUrl= txtSearchUrl.Text;
+
+                txtBlockResult.Text = string.Empty;
+
+                if (IsFormInputInvalid(searchText, searchUrl))
+                {
+                    txtBlockResult.Text = "Invalid input data";
+                    return;
+                }
+
+                SearchResult result = await _webApiService.GetURLRanksAsync(searchText, searchUrl);
 
                 if (result == null)
                     txtBlockResult.Text = "Could not fetch result from server";
@@ -43,6 +55,11 @@ namespace SEO_WPFClient
             }
         }
 
+        private bool IsFormInputInvalid(string searchText, string searchUrl)
+        {
+            return (searchText.TrimSpecialChars().IsNullOrEmpty()
+                || searchUrl.TrimSpecialChars().IsNullOrEmpty());
+        }
     }
 
 }

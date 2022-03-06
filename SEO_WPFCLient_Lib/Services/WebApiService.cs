@@ -19,6 +19,9 @@ namespace SEO_WPFCLient_Lib.Services
         /// <returns></returns>
         public async Task<SearchResult> GetURLRanksAsync(string searchText, string urlToMatch)
         {
+            searchText = searchText.TrimSpecialChars();
+            urlToMatch = urlToMatch.TrimSpecialChars();
+
             if (searchText.IsNullOrEmpty() || urlToMatch.IsNullOrEmpty())
                 return await Task.FromResult<SearchResult>(null);
 
