@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SEO_WPFClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="SmokeballSEOTest" Height="450" Width="800">
     <Grid x:Name="gridMain" RenderTransformOrigin="0.497,0.326" Margin="10,10,10,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="79*"/>
             <RowDefinition Height="345*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="lblHeader" Content="Snowball SEO Test" VerticalAlignment="Top"  Height="69" HorizontalContentAlignment="Center" FontSize="40" FontWeight="SemiBold" VerticalContentAlignment="Center" Background="#FFF0E8E8">
+        <Label x:Name="lblHeader" Content="Smokeball SEO Test" VerticalAlignment="Top"  Height="69" HorizontalContentAlignment="Center" FontSize="40" FontWeight="SemiBold" VerticalContentAlignment="Center" Background="#FFF0E8E8">
             <Label.Style>
                 <Style/>
             </Label.Style>

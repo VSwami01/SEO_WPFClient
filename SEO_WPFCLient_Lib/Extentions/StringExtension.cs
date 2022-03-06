@@ -1,4 +1,4 @@
-﻿namespace SEO_WPFClient.Extentions
+﻿namespace SEO_WPFCLient_Lib.Extentions
 {
     public static class StringExtension
     {

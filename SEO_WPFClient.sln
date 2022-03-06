@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEO_WPFClient", "SEO_WPFClient\SEO_WPFClient.csproj", "{05E0CFB4-B43D-4ECB-979F-F7F4889A7A95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEO_WPFClient", "SEO_WPFClient\SEO_WPFClient.csproj", "{05E0CFB4-B43D-4ECB-979F-F7F4889A7A95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEO_WPFClient_Test", "SEO_WPFClient_Test\SEO_WPFClient_Test.csproj", "{8E02C9F3-7956-4E90-8459-9E95FE4B7AE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEO_WPFClient_Lib", "SEO_WPFCLient_Lib\SEO_WPFClient_Lib.csproj", "{2C101293-050B-47DD-A5A3-46C7A6D2CA7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{05E0CFB4-B43D-4ECB-979F-F7F4889A7A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E0CFB4-B43D-4ECB-979F-F7F4889A7A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E0CFB4-B43D-4ECB-979F-F7F4889A7A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E02C9F3-7956-4E90-8459-9E95FE4B7AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E02C9F3-7956-4E90-8459-9E95FE4B7AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E02C9F3-7956-4E90-8459-9E95FE4B7AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E02C9F3-7956-4E90-8459-9E95FE4B7AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C101293-050B-47DD-A5A3-46C7A6D2CA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C101293-050B-47DD-A5A3-46C7A6D2CA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C101293-050B-47DD-A5A3-46C7A6D2CA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C101293-050B-47DD-A5A3-46C7A6D2CA7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

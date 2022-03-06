@@ -1,11 +1,13 @@
 ﻿using Newtonsoft.Json;
-using SEO_WPFClient.AppSettings;
-using SEO_WPFClient.ViewModel;
+using SEO_WPFCLient_Lib.AppSettings;
+using SEO_WPFCLient_Lib.Extentions;
+using SEO_WPFCLient_Lib.Model;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace SEO_WPFClient.Services
+namespace SEO_WPFCLient_Lib.Services
 {
     public class WebApiService : IWebApiService
     {
@@ -17,6 +19,8 @@ namespace SEO_WPFClient.Services
         /// <returns></returns>
         public async Task<SearchResult> GetURLRanksAsync(string searchText, string urlToMatch)
         {
+            if (searchText.IsNullOrEmpty() || urlToMatch.IsNullOrEmpty())
+                return await Task.FromResult<SearchResult>(null);
 
             string query = string.Format("searchText={0}&urlToMatch={1}", searchText, urlToMatch);
             return await CallApi<SearchResult>(Settings.GETURLRANKS_URL, query);
@@ -27,10 +31,13 @@ namespace SEO_WPFClient.Services
         /// </summary>
         /// <param name="searchText"></param>
         /// <returns></returns>
-        public async Task<string> GetAllLinks(string searchText)
+        public async Task<IEnumerable<string>> GetAllLinksAsync(string searchText)
         {
+            if (searchText.IsNullOrEmpty())
+                return await Task.FromResult<IList<string>>(null);
+
             string query = string.Format("searchText={0}", searchText);
-            return await CallApi<string>(Settings.GETALLLINKS_URL, query);
+            return await CallApi<IEnumerable<string>>(Settings.GETALLLINKS_URL, query);
         }
 
         /// <summary>

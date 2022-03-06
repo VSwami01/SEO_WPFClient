@@ -1,4 +1,4 @@
-﻿namespace SEO_WPFClient.AppSettings
+﻿namespace SEO_WPFCLient_Lib.AppSettings
 {
     /// <summary>
     /// Provide application level settings

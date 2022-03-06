@@ -1,6 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using SEO_WPFClient.Services;
-using SEO_WPFClient.ViewModel;
+﻿using SEO_WPFCLient_Lib.Model;
+using SEO_WPFCLient_Lib.Services;
 using System;
 using System.Windows;
 

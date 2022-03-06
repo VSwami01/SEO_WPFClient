@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace SEO_WPFClient.ViewModel
+namespace SEO_WPFCLient_Lib.Model
 {
     public class SearchResult
     {

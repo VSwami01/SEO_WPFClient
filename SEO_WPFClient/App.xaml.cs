@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using SEO_WPFClient.Services;
+using SEO_WPFCLient_Lib.Services;
 using System.Windows;
 
 namespace SEO_WPFClient
